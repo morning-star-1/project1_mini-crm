@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dir: [client, server, tasks-api]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.11.1
+          cache: npm
+      - run: npm install
+        working-directory: ${{ matrix.dir }}
+      - run: npm test
+        working-directory: ${{ matrix.dir }}

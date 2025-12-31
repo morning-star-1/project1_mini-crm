@@ -1,0 +1,19 @@
+{
+    "name":  "tasks-api",
+    "version":  "1.0.0",
+    "description":  "",
+    "main":  "index.js",
+    "scripts":  {
+                    "test":  "node --test",
+                    "lint":  "eslint ."
+                },
+    "keywords":  [
+
+                 ],
+    "author":  "",
+    "license":  "ISC",
+    "type":  "commonjs",
+    "devDependencies":  {
+                            "eslint":  "^9.0.0"
+                        }
+}
